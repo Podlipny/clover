@@ -2,30 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>#WARNING - 1</key>
-	<string>This is just a sample. Do NOT try loading it.</string>
-	<key>#WARNING - 2</key>
-	<string>Ensure you understand EVERY field before booting.</string>
-	<key>#WARNING - 3</key>
-	<string>In most cases recommended to use Sample.plist</string>
-	<key>#WARNING - 4</key>
-	<string>Use SampleFull.plist for end of life models: 2011 and older.</string>
-	<key>#WARNING - 5</key>
-	<string>https://github.com/acidanthera/OpenCorePkg/blob/master/AppleModels/DataBase.md</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>DSDT.aml</string>
-				<key>Path</key>
-				<string>DSDT.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-AWAC.aml</string>
 				<key>Path</key>
 				<string>SSDT-AWAC.aml</string>
@@ -34,9 +16,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-EC.aml</string>
+				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 				<key>Path</key>
-				<string>SSDT-EC.aml</string>
+				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -201,17 +183,17 @@
 			<key>ProtectSecureBoot</key>
 			<false/>
 			<key>ProtectUefiServices</key>
-			<true/>
+			<false/>
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>RebuildAppleMemoryMap</key>
-			<true/>
+			<false/>
 			<key>SetupVirtualMap</key>
 			<true/>
 			<key>SignalAppleOS</key>
 			<false/>
 			<key>SyncRuntimePermissions</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -538,9 +520,9 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
-			<false/>
+			<true/>
 			<key>AppleXcpmCfgLock</key>
-			<false/>
+			<true/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
 			<key>AppleXcpmForceBoost</key>
@@ -560,9 +542,9 @@
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<false/>
+			<true/>
 			<key>PowerTimeoutKernelPanic</key>
-			<false/>
+			<true/>
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
@@ -602,7 +584,7 @@
 			<key>AppleDebug</key>
 			<true/>
 			<key>ApplePanic</key>
-			<false/>
+			<true/>
 			<key>DisableWatchDog</key>
 			<true/>
 			<key>DisplayDelay</key>
@@ -642,7 +624,7 @@
 			<key>BlacklistAppleUpdate</key>
 			<true/>
 			<key>BootProtect</key>
-			<string>None</string>
+			<string>Bootstrap</string>
 			<key>ExposeSensitiveData</key>
 			<integer>6</integer>
 			<key>HaltLevel</key>
@@ -691,7 +673,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 agdpmod=pikera	</string>
+				<string>-v keepsyms=1 debug=0x100 alcid=1 agdpmod=pikera	</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -716,9 +698,9 @@
 			</array>
 		</dict>
 		<key>LegacyEnable</key>
-		<false/>
+		<true/>
 		<key>LegacyOverwrite</key>
-		<false/>
+		<true/>
 		<key>LegacySchema</key>
 		<dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
@@ -818,7 +800,6 @@
 			<string>HfsPlus.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
-			<string>VBoxHfs.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -837,7 +818,7 @@
 			<key>PointerSupport</key>
 			<false/>
 			<key>PointerSupportMode</key>
-			<string>ASUS</string>
+			<string></string>
 			<key>TimerResolution</key>
 			<integer>50000</integer>
 		</dict>
