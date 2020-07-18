@@ -1,0 +1,54 @@
+
+Clover EFI installer log - Sat Jun 20 13:40:43 CEST 2020
+Installer version: r5119 (commit: 0f5da727e) EFI bootloader
+======================================================
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *512.1 GB   disk0
+   1:                        EFI EFI                     209.7 MB   disk0s1
+   2:                 Apple_APFS Container disk3         511.9 GB   disk0s2
+
+/dev/disk1 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *960.2 GB   disk1
+   1:               Windows_NTFS                         5.2 GB     disk1s1
+   2:               Windows_NTFS                         955.0 GB   disk1s2
+
+/dev/disk2 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *120.0 GB   disk2
+   1:                  Apple_HFS Data SSD                120.0 GB   disk2s1
+
+/dev/disk3 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +511.9 GB   disk3
+                                 Physical Store disk0s2
+   1:                APFS Volume OS X - Data             228.1 GB   disk3s1
+   2:                APFS Volume Preboot                 152.0 MB   disk3s2
+   3:                APFS Volume Recovery                530.4 MB   disk3s3
+   4:                APFS Volume VM                      1.1 GB     disk3s4
+   5:                APFS Volume OS X                    11.1 GB    disk3s5
+
+/dev/disk4 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *2.0 TB     disk4
+   1:                  Apple_HFS Data                    1.4 TB     disk4s1
+   2:                  Apple_HFS Untitled                638.3 GB   disk4s2
+
+Target volume /Volumes/OS X on disk3 is APFS on physical store disk0s2
+======================================================
+Backing up EFI files
+
+Backing up stage2 file /Volumes/OS X/EFIROOTDIR/boot  to /Volumes/OS X/EFI-Backups/r5099/2020-06-20-13h40/boot
+Backing up /Volumes/OS X/EFIROOTDIR/EFI folder to /Volumes/OS X/EFI-Backups/r5099/2020-06-20-13h40/EFI
+======================================================
+Installing BootSectors/BootLoader
+
+Stage 0 - Don't write any of boot0af, boot0md, boot0ss to /
+Stage 1 - Don't write any of boot1h2, boot1f32alt, boot1xalt to /
+Stage 2 - Written boot6 (x64) to /Volumes/ESP/boot
+
+Using default theme 'random'
+======================================================
+=========== Clover EFI Installation Finish ===========
+======================================================
